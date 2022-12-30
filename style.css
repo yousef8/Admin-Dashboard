@@ -36,6 +36,47 @@ img {
 /* =======================================================Sidebar====================================================================== */
 .sidebar {
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr;
+    gap: 2rem;
+}
+
+.sidebar>.logo {
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.sidebar>.logo * {
+    margin: 1rem;
+}
+
+.sidebar>.logo>i {
+    font-size: 2.5rem;
+    justify-self: center;
+}
+
+/* ================Menu================ */
+.sidebar ul {
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.sidebar ul>li {
+    list-style: none;
+    font-weight: 900;
+    margin: 1rem;
+}
+
+.sidebar ul>li:nth-child(2n-1) {
+    justify-self: center;
+}
+
+.sidebar ul>li>i {
+    font-size: 1.5rem;
 }
 
 /* =======================================================Header======================================================================= */
