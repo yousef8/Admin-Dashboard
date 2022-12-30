@@ -14,8 +14,7 @@ img {
     height: 100vh;
 }
 
-.header,
-.sidebar,
+
 .main-content {
     border: 2px solid black;
 }
@@ -25,7 +24,7 @@ img {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(3, 2fr);
     grid-template-areas:
         "sidebar header"
         "sidebar main-content"
@@ -82,6 +81,101 @@ img {
 /* =======================================================Header======================================================================= */
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* =========================First Row===================== */
+
+.header>.first-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+/* -----------Search Part----------- */
+.header>.first-row>.search {
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+}
+
+.header>.first-row>.search>i {
+    justify-self: center;
+    font-size: 1.3rem;
+}
+
+.header>.first-row>.search>input {
+    width: 85%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #E2E8F0;
+}
+
+/* -------------User Info---------- */
+.header>.first-row>.usr-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header>.first-row>.usr-info>i {
+    font-size: 1.8rem;
+}
+
+.header>.first-row>.usr-info>img {
+    width: 3.5rem;
+}
+
+.header>.first-row>.usr-info>p {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* ==============Second Row================= */
+.header>.second-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* --------------User Info---------- */
+.header>.second-row>.usr-info {
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.header>.second-row>.usr-info>img {
+    width: 3.5rem;
+}
+
+.header>.second-row>.usr-info>.text-content {
+    margin-left: 1rem;
+}
+
+.header>.second-row>.usr-info>.text-content>small {
+    font-size: 1rem;
+    font-weight: bold
+}
+
+.header>.second-row>.usr-info>.text-content>h1 {
+    margin: 0;
+}
+
+/* --------------Buttons-------------- */
+.header>.second-row>.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.header>.second-row>.buttons>button {
+    padding: 0.5em 2rem;
+    border-radius: 1.5rem;
 }
 
 /* =====================================================Main Content=================================================================== */
