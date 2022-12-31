@@ -14,12 +14,9 @@ img {
     height: 100vh;
 }
 
-
-.main-content {
-    border: 2px solid black;
-}
-
 /* ===================================================Begin Styling==================================================================== */
+
+
 /* ===================================================Grid Container Styling=========================================================== */
 .container {
     display: grid;
@@ -180,5 +177,52 @@ img {
 
 /* =====================================================Main Content=================================================================== */
 .main-content {
+    padding: 1rem;
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+    box-shadow: inset rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/* ==============Projects=============== */
+.main-content>.projects>.title>h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.main-content>.projects>.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.main-content>.projects>.articles>.article {
+    border-radius: 3%;
+    border-left: 5px solid;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.main-content>.projects>.articles>.article>p:first-of-type {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+}
+
+.main-content>.projects>.articles>.article>p:last-of-type {
+    margin-top: 0.5rem;
+}
+
+.main-content>.projects>.articles>.article>.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.main-content>.projects>.articles>.article>.buttons>i {
+    font-size: 22px;
 }
