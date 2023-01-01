@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --paragraph-gray: #78716c;
+}
+
 img {
-    width: 1rem;
+    width: 3.5rem;
 }
 
 .container {
@@ -16,6 +20,11 @@ img {
 
 /* ===================================================Begin Styling==================================================================== */
 
+.title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
 
 /* ===================================================Grid Container Styling=========================================================== */
 .container {
@@ -186,12 +195,6 @@ img {
 }
 
 /* ==============Projects=============== */
-.main-content>.projects>.title>h2 {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin: 1rem 0;
-}
-
 .main-content>.projects>.articles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,6 +217,7 @@ img {
 
 .main-content>.projects>.articles>.article>p:last-of-type {
     margin-top: 0.5rem;
+    color: var(--paragraph-gray);
 }
 
 .main-content>.projects>.articles>.article>.buttons {
@@ -225,4 +229,69 @@ img {
 
 .main-content>.projects>.articles>.article>.buttons>i {
     font-size: 22px;
+}
+
+/* ==============Side Content==================== */
+.side-content {
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1rem;
+}
+
+/* -----------Announcements----------- */
+.announcements {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.announcements>.container {
+    border-radius: 3%;
+    padding: 1rem;
+    height: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.announcements>.container>div>h4 {
+    margin: 0;
+}
+
+.announcements>.container>.announce:not(:first-child)>h4 {
+    margin-top: 1rem;
+}
+
+.announcements>.container>div:not(:last-child) {
+    border-bottom: 1px solid var(--paragraph-gray);
+}
+
+.announcements>.container>.announce>p {
+    margin-top: 0.5rem;
+    color: var(--paragraph-gray);
+}
+
+/* ---------Trending---------------- */
+.trending>.container {
+    border-radius: 3%;
+    padding: 1rem;
+    height: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.trending>.container>.usr {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.trending>.container>.usr>.text>p:first-child {
+    margin-bottom: 0;
+}
+
+.trending>.container>.usr>.text>p:last-child {
+    margin-top: 0.5rem;
+    color: var(--paragraph-gray);
 }
