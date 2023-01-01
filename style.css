@@ -186,6 +186,7 @@ img {
 
 /* =====================================================Main Content=================================================================== */
 .main-content {
+    overflow: auto;
     padding: 1rem;
     grid-area: main-content;
     display: grid;
